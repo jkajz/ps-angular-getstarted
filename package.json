@@ -1,0 +1,26 @@
+{
+  "name": "ps-angular-getstarted",
+  "version": "1.0.0",
+  "description": "Pluralsight Angular Get Started course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkajz/ps-angular-getstarted.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkajz/ps-angular-getstarted/issues"
+  },
+  "homepage": "https://github.com/jkajz/ps-angular-getstarted#readme",
+  "dependencies": {
+    "angular": "^1.3.20",
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
