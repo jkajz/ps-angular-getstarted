@@ -1,1 +1,1 @@
-#Angular Notes
+#Pluralsight - AngularJS: Get started

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="githubViewer">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pluralsight - AngularJS: Get Started</title>
+    <script src="src/bundle.js"></script>
+</head>
+
+<body ng-controller="MainController">
+    <h1>{{ message }}</h1>
+    <div>
+        <div>{{error}}</div>
+        <div>Name: {{user.name}}</div>
+        <div>Location: {{user.location}}</div>
+        <div>
+            <img ng-src="{{user.avatar_url}}" title="{{user.name}}"></img>
+        </div>
+    </div>
+</body>
+
+</html>

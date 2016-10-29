@@ -10,7 +10,7 @@ var config = {
 	devBaseUrl: 'http://localhost',
 	paths: {
 		html: './www/*.html',
-		js: './www/src/*.js',
+		js: './www/src/app/*.js',
 		css: './www/css/*.css'
 	}
 };
@@ -36,7 +36,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-	browserify('./www/src/app.js')
+	browserify('./www/src/app/app.js')
 		.bundle()
 		.on('error', console.error.bind(console))
 		.pipe(source('bundle.js'))
