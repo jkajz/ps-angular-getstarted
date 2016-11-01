@@ -2,4 +2,5 @@
 
 var app = require('angular').module('githubViewer', []);
 
-app.controller('MainController', ['$scope', '$http', require('./MainController')]);
+app.factory('github', ['$http', require('./github')]);
+app.controller('MainController', ['$scope', 'github', '$interval', '$log', '$anchorScroll', '$location', require('./MainController')]);
