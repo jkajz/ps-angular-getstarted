@@ -1,29 +1,13 @@
 'use strict';
 
-module.exports = function($scope, github, $interval, $log, $anchorScroll, $location) {
+module.exports = function($scope, $interval, $location) {
 
-    var onRepos = function(data) {
-        $scope.repos = data;
-        $location.hash('userdetails');
-        $anchorScroll();
-    };
-
-    var onUserComplete = function(data) {
-        $scope.user = data;
-        github.getRepos($scope.user).then(onRepos, onError);
-    };
-
-    var onError = function(error) {
-        $scope.error = 'Could not fetch data';
-    };
-    
     $scope.search = function(username) {
-        $log.info('Searching for ' + username);
-        github.getUser(username).then(onUserComplete, onError);
         if (countdownInterval) {
             $interval.cancel(countdownInterval);
             $scope.countdown = null;
         }
+        $location.path('/user/' + username);
     };
 
     var countdownInterval = null;
@@ -40,8 +24,6 @@ module.exports = function($scope, github, $interval, $log, $anchorScroll, $locat
     };
     
     $scope.username = 'angular';
-    $scope.message = 'Github Viewer';
-    $scope.repoSortOrder = '-stargazers_count';
     $scope.countdown = 5;
 
     startCountdown();
